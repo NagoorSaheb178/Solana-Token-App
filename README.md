@@ -88,4 +88,4 @@ Edit
 npm run dev
 # or
 yarn dev
-
+https://solana-token-app-weld.vercel.app/
