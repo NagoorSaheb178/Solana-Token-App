@@ -1,0 +1,129 @@
+/* TokenCreator.css */
+.token-creator-container {
+  transition: all 0.3s ease-in-out;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.form-control {
+  transition: all 0.2s ease;
+}
+
+.form-control:focus-within {
+  transform: scale(1.02);
+}
+
+.input-field {
+  transition: border-color 0.2s ease;
+}
+
+.input-field:hover {
+  border-color: #63B3ED;
+}
+
+.button-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.action-button {
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.action-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.action-button:active {
+  transform: translateY(1px);
+}
+
+.divider {
+  position: relative;
+  margin: 2rem 0;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .token-creator-container {
+    padding: 1rem;
+  }
+
+  .form-control {
+    margin-bottom: 1rem;
+  }
+
+  .button-container {
+    width: 100%;
+  }
+
+  .action-button {
+    width: 100%;
+  }
+}
+
+/* Loading Animation */
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Success Animation */
+.success-animation {
+  animation: successPulse 0.5s ease-out;
+}
+
+@keyframes successPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Error Animation */
+.error-animation {
+  animation: errorShake 0.5s ease-in-out;
+}
+
+@keyframes errorShake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
